@@ -29,7 +29,7 @@
   @include tab {
     margin-left: unset;
   }
-  @include tab-min() {
+  @include tab() {
     max-width: 299px;
   }
 }
@@ -159,7 +159,7 @@
       left: 58px;
       bottom: 8px;
       width: unset;
-      @include tab-min() {
+      @include tab() {
         left: 40px;
       }
     }

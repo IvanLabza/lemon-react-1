@@ -92,7 +92,7 @@ html {
     margin-left: unset;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .form-wrapper {
     max-width: 299px;
   }
@@ -275,7 +275,7 @@ html {
   bottom: 8px;
   width: unset;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .form-log img {
     left: 40px;
   }
