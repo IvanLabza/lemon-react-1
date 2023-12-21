@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+import FormFunc from "./FormFunc/FormFunc";
 
 function Form() {
   return (
@@ -8,24 +10,7 @@ function Form() {
         Please fill your detail to access your account.
       </p>
       <form className="form">
-        <label className="form-label">
-          Email
-          <input
-            className="form-mail input"
-            placeholder="debra.holt@example.com"
-            type="text"
-          />
-          <img width="24" height="24" src="./assets/xIcon.svg" alt="" />
-        </label>
-        <label className="form-label">
-          Password
-          <input
-            type="{{ showPassword ? 'text' : 'password' }}"
-            className="form-pass input"
-            placeholder="••••••••"
-          />
-          <img width="24" height="24" src="./assets/hideIcon.svg" alt="" />
-        </label>
+        <FormFunc />
         <div className="wrapper">
           <label className="form-label checkbox">
             <input type="checkbox" className="form-check" />
