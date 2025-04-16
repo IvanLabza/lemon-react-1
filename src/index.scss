@@ -1,73 +1,30 @@
-@import "./scss/reset";
-@import "./scss/header";
-@import "./scss/form";
-@import "./scss/footer";
+@import "./scss/vendors/mixin";
+@import "./scss/vendors/animation";
 
-@mixin tab {
-  @media screen and (max-width: 1000px) {
-    @content;
-  }
-}
-
-@mixin tab-min {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin tel-min {
-  @media screen and (max-width: 450px) {
-    @content;
-  }
-}
-
-@mixin tel {
-  @media screen and (max-width: 376px) {
-    @content;
-  }
-}
+@import "./scss/components/reset";
+@import "./scss/components/header";
+@import "./scss/components/form";
+@import "./scss/components/footer";
 
 html {
   scroll-behavior: smooth;
 }
 
-@mixin tab {
-  @media screen and (max-width: 1000px) {
-    @content;
-  }
-}
-
-@mixin tab-min {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin tel-min {
-  @media screen and (max-width: 450px) {
-    @content;
-  }
-}
-
-@mixin tel {
-  @media screen and (max-width: 376px) {
-    @content;
-  }
-}
-
 .container {
   padding: 32px;
   margin: 0 auto;
+  background-color: #222121;
   @include tel() {
     padding: 10px;
   }
   .wrapper {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     gap: 50px;
     padding: 32px;
-    max-width: calc(1440px - 32px * 2);
-    margin: 0 auto;
     border-radius: 44px;
     background: #fcfdff;
     @include tab {
@@ -90,16 +47,11 @@ html {
       display: flex;
       justify-content: center;
       align-items: center;
-      
+      animation: slideFadeOut 1s ease-out forwards;
+
       @include tab() {
         display: none;
       }
     }
   }
-}
-
-.wrapper {
-  max-width: 1360px;
-  margin: 0 auto;
-  padding: 0 15px;
 }

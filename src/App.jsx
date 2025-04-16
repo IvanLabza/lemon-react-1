@@ -1,7 +1,7 @@
 import "./index.css";
-import Header from "./Parsels/header/Header";
-import Footer from "./Parsels/footer/Footer";
-import Form from "./Parsels/form/Form";
+import Header from "./component/header/Header";
+import Footer from "./component/footer/Footer";
+import Form from "./component/form/Form";
 
 function App() {
   return (

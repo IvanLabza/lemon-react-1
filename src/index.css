@@ -1,3 +1,51 @@
+@-webkit-keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideFadeOut {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slideFadeOut {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 ul,
 li {
   list-style-type: none;
@@ -86,14 +134,12 @@ html {
           flex-direction: column;
   margin-left: 100px;
   width: 360px;
+  -webkit-animation: slideFadeIn 1s ease-out forwards;
+          animation: slideFadeIn 1s ease-out forwards;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 980px) {
   .form-wrapper {
     margin-left: unset;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .form-wrapper {
     max-width: 299px;
   }
 }
@@ -107,7 +153,7 @@ html {
   text-align: left;
   margin-bottom: 8px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 980px) {
   .form-title {
     font-size: 32px;
   }
@@ -117,12 +163,11 @@ html {
   color: #667085;
   font-family: Inter;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 56px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 980px) {
   .form-text {
     font-size: 14px;
   }
@@ -243,7 +288,6 @@ html {
   color: #fff;
   font-family: Inter;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 20px;
   display: block;
@@ -253,29 +297,43 @@ html {
   border-color: transparent;
   margin-bottom: 16px;
 }
+.form-submit:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  background-color: #5f3dc4;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .form-log {
   color: var(--Secondary-Color, #344054);
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  padding: 10px 90px;
+  padding: 10px 45px;
+  text-align: center;
   border-radius: 8px;
   border: 1px solid var(--Accent-1, #d0d5dd);
   position: relative;
 }
-@media screen and (max-width: 1000px) {
+.form-log:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 980px) {
   .form-log {
     padding: 10px 70px;
   }
 }
 .form-log img {
   position: absolute;
-  left: 58px;
-  bottom: 8px;
+  left: 85px;
+  bottom: 9px;
   width: unset;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 980px) {
   .form-log img {
     left: 40px;
   }
@@ -315,6 +373,7 @@ html {
 .container {
   padding: 32px;
   margin: 0 auto;
+  background-color: #222121;
 }
 @media screen and (max-width: 376px) {
   .container {
@@ -381,6 +440,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: slideFadeOut 1s ease-out forwards;
+          animation: slideFadeOut 1s ease-out forwards;
 }
 @media screen and (max-width: 1000px) {
   .container .wrapper .image-container {
